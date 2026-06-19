@@ -1,6 +1,6 @@
 module "vpc" {
   source     = "./modules/vpc"
-  cidr_block = var.vpc_cidr_block
+  cidr_block = var.subnet_cidr_block
   # "10.0.0.0/16"
 }
 
@@ -30,14 +30,12 @@ module "route_table" {
 module "security_group" {
   source = "./modules/security_group"
   vpc_id = module.vpc.vpc_id
-
 }
 
 module "ec2" {
-  source    = "./modules/ec2"
-  subnet_id = module.subnet.subnet_id
+  source            = "./modules/ec2"
+  subnet_id         = module.subnet.subnet_id
+  security_group_id = module.security_group.sg_id
+  key_name          = "login-key"
 }
 
-output "instance_public_ip" {
-  value = module.ec2.instance_public_ip
-}

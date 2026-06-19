@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .project-structure {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.8;
+            color: #333;
+        }
+        .project-structure code {
+            color: #e74c3c;
+        }
+        .achievements {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .achievement-card {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .achievement-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .achievement-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .achievements {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 AWS Project</h1>
+        <p class="subtitle">Cloud Infrastructure & Deployment Project</p>
+
+        <div class="section">
+            <h2>Project Overview</h2>
+            <p style="color: #555; line-height: 1.8;">This project demonstrates a complete AWS-based cloud infrastructure setup, including deployment of web applications, database configuration, and cloud resource management.</p>
+        </div>
+
+        <div class="section">
+            <h2>Project Structure</h2>
+            <div class="project-structure">
+                <code>aws_project/</code><br>
+                ├── <code>webpage/</code><br>
+                │   └── <code>index.html</code> (This file)<br>
+                ├── <code>backend/</code><br>
+                │   └── Application code & configuration<br>
+                ├── <code>infrastructure/</code><br>
+                │   └── CloudFormation & Terraform scripts<br>
+                ├── <code>database/</code><br>
+                │   └── Database schemas & migrations<br>
+                └── <code>docs/</code><br>
+                    └── Documentation & guides
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What We Did</h2>
+            <div class="achievements">
+                <div class="achievement-card">
+                    <h3>✅ Infrastructure Setup</h3>
+                    <p>Configured AWS VPC, subnets, security groups, and network infrastructure for secure communication.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>✅ Application Deployment</h3>
+                    <p>Deployed web application using EC2 instances with auto-scaling and load balancing.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>✅ Database Configuration</h3>
+                    <p>Set up RDS with multi-AZ deployment and automated backups for high availability.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>✅ Monitoring & Logging</h3>
+                    <p>Implemented CloudWatch monitoring, alarms, and centralized logging for system health tracking.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>✅ Security Implementation</h3>
+                    <p>Applied IAM roles, encryption, and security best practices across all resources.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>✅ CI/CD Pipeline</h3>
+                    <p>Set up automated deployment pipeline using CodePipeline and CodeDeploy.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="text-align: center; color: #999; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee;">
+            <p>AWS Project &copy; 2024</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 module "vpc" {
   source     = "./modules/vpc"
-  cidr_block = var.subnet_cidr_block
+  cidr_block = var.vpc_cidr_block
   # "10.0.0.0/16"
 }
 

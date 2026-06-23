@@ -32,7 +32,7 @@ variable "cidr_block_id" {
   default     = "0.0.0.0/0"
 }
 
-variable "Name" {
+variable "name" {
   description = "The name tag for the route table."
   type        = string
   default     = "rt_ec2"

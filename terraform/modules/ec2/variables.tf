@@ -45,3 +45,9 @@ variable "owner_id" {
   type        = string
   default     = "137112412989"
 }
+
+variable "git_repo_url" {
+  description = "Git repository URL to clone."
+  type        = string
+  default     = "https://github.com/sumit-8305/website_aws_project.git"
+}

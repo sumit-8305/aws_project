@@ -23,16 +23,17 @@ resource "aws_instance" "ec2_instance" {
     timeout     = "2m"
   }
 
-  provisioner "file" {
-    source      = "${path.root}/../webpage/index.html"
-    destination = "/tmp/index.html"
-  }
+  # provisioner "file" {
+  #   source      = "${path.root}/../webpage/index.html"
+  #   destination = "/tmp/index.html"
+  # }
 
   provisioner "remote-exec" {
     inline = [
-      "sudo dnf install -y nginx",
+      "sudo dnf install -y nginx git",
       "sudo systemctl enable --now nginx",
-      "sudo mv /tmp/index.html /usr/share/nginx/html/index.html",
+      "sudo rm -rf /usr/share/nginx/html/*",
+      "sudo git clone ${var.git_repo_url} /usr/share/nginx/html",
       "sudo systemctl restart nginx"
     ]
   }

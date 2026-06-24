@@ -39,3 +39,11 @@ module "ec2" {
   key_name          = "login-key"
 }
 
+module "jenkins" {
+  source            = "./modules/jenkins"
+  subnet_id         = module.subnet.subnet_id
+  security_group_id = module.security_group.sg_id
+  key_name          = var.jenkins_key_name
+  instance_type     = var.jenkins_instance_type
+  instance_name     = var.jenkins_instance_name
+}

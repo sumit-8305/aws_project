@@ -40,6 +40,8 @@ variable "private_key_path" {
   default     = "~/.ssh/my_aws_key"
 }
 
+
+
 variable "owner_id" {
   description = "Owner ID for the AMI."
   type        = string

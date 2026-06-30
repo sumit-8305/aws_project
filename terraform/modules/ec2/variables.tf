@@ -34,13 +34,16 @@ variable "key_name" {
   type        = string
 }
 
-variable "private_key_path" {
-  description = "Local SSH private key path for provisioner connection."
+variable "private_key_content" {
+  description = "Content of the SSH private key for provisioner connection."
   type        = string
-  default     = "~/.ssh/my_aws_key"
+  sensitive   = "true"
 }
 
-
+variable "public_key_content" {
+  description = "The raw string content of the SSH public key"
+  type        = string
+}
 
 variable "owner_id" {
   description = "Owner ID for the AMI."

@@ -37,6 +37,8 @@ module "ec2" {
   subnet_id         = module.subnet.subnet_id
   security_group_id = module.security_group.sg_id
   key_name          = "login-key"
+  private_key_content = var.private_key_content
+  public_key_content = var.public_key_content
 }
 
 module "jenkins" {

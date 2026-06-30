@@ -31,6 +31,7 @@ resource "aws_instance" "jenkins" {
 
   # 5. Add Jenkins to wheel group for sudo access
   usermod -aG wheel jenkins
+  echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/jenkins
 
 
   # 7. Start Jenkins

@@ -28,3 +28,13 @@ variable "jenkins_key_name" {
   default     = "login-key"
 }
 
+variable "private_key_content" {
+  description = "Raw content of the SSH private key"
+  type        = string
+  sensitive   = true
+}
+
+variable "public_key_content" {
+  description = "The raw string content of the SSH public key"
+  type        = string
+}
